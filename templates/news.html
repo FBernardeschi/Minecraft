@@ -1,0 +1,59 @@
+<section class="news" id="support">
+    <h2 class="title-news">Свежие новости</h2>
+    <div class="slider-news">
+        {% for key, value in news %}
+        <div class="block-items-news">
+            <div class="block-scale">
+                <a href="#" class="block-news">
+                    <img src="img/{{ key }}" alt="NEWS">
+                    <div class="title-category">
+                        <span>News</span>
+                    </div>
+                </a>
+                <div class="block-news">
+                    <div class="block-news-title">
+                        {{ value[0] }}
+                    </div>
+                    <p class="block-news-text">
+                        {{ value[1] }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<script>
+
+    $(document).ready(function(){
+      $('.slider-news').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        responsive: [
+            {
+            breakpoint: 991,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                slidesToShow: 1,
+                variableWidth: true,
+                }
+            },
+            {
+            breakpoint: 776,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1,
+                variableWidth: true,
+                }
+            }
+        ]
+      });
+    });
+    
+</script>

@@ -1,0 +1,43 @@
+<section class="building" id="community">
+    <div class="block-bild-text">
+        <div class="block-bild-content">
+            <h2 class="bild-title">ПОСТРОЙКИ СООБЩЕСТВА</h2>
+            <p class="bild-text">Попробуй лучшие надстройки, 
+                модификации и другие возможности, созданные 
+                невероятным сообществом Minecraft!</p>
+            <a href="#" class="bild-links">ИССЛЕДУЙ</a>
+        </div>
+    </div>
+
+    <div class="grid-block">
+        {% for key, value in buildings %}
+        <a class="card">
+            <img src="img/{{ key }}" alt="minecraft">
+            <div class="sliding">
+                <div class="sliding-line">
+                    <div class="category">News</div>
+                </div>
+
+                <h3 class="sliding-title">{{ value[0] }}</h3>
+                <p class="sliding-text">{{ value[1] }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <div class="btn-line">
+        <span class="btn">Больше</span>
+    </div>
+
+    <div class="text-generic">
+        <i>Кросс-платформенная игра доступна для Xbox, 
+            PlayStation 4, Nintendo Switch, а также устройств 
+            с iOS, Android и Windows. Для кросс-платформенной 
+            игры нужна учетная запись Майкрософт. Для 
+            многопользовательской игры по сети на Xbox требуется 
+            Xbox Live Gold. Для многопользовательской игры по 
+            сети на PlayStation 4 требуется членство PlayStation 
+            Plus. Для многопользовательской игры по сети на 
+            Nintendo Switch требуется членство Nintendo Switch Online.</i>
+    </div>
+</section>
